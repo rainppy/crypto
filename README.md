@@ -5,3 +5,4 @@
 ## Project4: implement sm2 with RFC6979
 ## Project5: verify the above pitfalls with proof-of-concept code
 ## Project6: report on the application of this deduce technique in Ethereum with ECDSA
+## Project8: forge a signature to pretend that you are Satoshi
