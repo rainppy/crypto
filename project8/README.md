@@ -22,7 +22,7 @@
   - blockchain.com上未能显示sig script字段
   - 因此，随机生成一个签名来模拟攻击
 
-![Image text]([.\blockchain.png](https://github.com/rainppy/crypto/blob/1a88780d7ff7cf253daee2d1bd135effb9f6422e/project8/pic/blockchain.png))
+![Image text](https://github.com/rainppy/crypto/blob/29eeeb1353b56c287dc5e9c7cae237e02b776fdb/project8/pic/blockchain.png))
 
 ## 运行指导
 
