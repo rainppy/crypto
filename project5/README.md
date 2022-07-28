@@ -51,9 +51,9 @@ $$
   - 0x30 [total-length] 0x02 [R-length] [R] 0x02 [S-length] [S] [sighash-type]
   - R 值: 不能以任何 0x00 字节开始，除非后面的第一个字节是 0x80 或更高
 - 不安全的编码方式：DER变体，如R值前加0x00字节，也可能通过验证
-  - 不安全的原因：对于同一$(r,s)$可以有多种编码方式，对应多种二进制流，导致hash值得共识打破，导致网络分裂。
+  - 不安全的原因：对于同一$(r,s)$可以有多种编码方式，对应多种签名值的二进制流，导致TX不同，进而导致hash值的共识打破，导致网络分裂。
 
-该部分不宜用代码说明，故理论分析之。
+该部分代码是实现了将ECDSA签名值进行正确的编码。
 
 ### 6.One can forge signature if the verification does not check m
 
