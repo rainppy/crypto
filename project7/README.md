@@ -17,8 +17,10 @@
 接收方
 
 - 收到`enc_sessionkey`和`enc_data`
-- 用私钥解密`enc_sessionkey`得到sm4会话密钥`sessionkey`
-- 用会话密钥`sessionkey`解密`enc_data`，得到明文消息
+- 用私钥解密`enc_sessionkey`得到sm4会话密钥`sessionkey`【对应函数get_sessionkey(self, enc_sessionkey)】
+- 用会话密钥`sessionkey`解密`enc_data`，得到明文消息- 【对应函数dec_data(self, enc_data)】
+
+
 
 ![Image text](https://github.com/rainppy/crypto/blob/e517c2cbf1f3538dba4328b47f2633a930b70399/project7/pic/code2.png)
 
