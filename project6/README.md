@@ -34,6 +34,7 @@ pip install ecdsa
 
 ![Image text](https://github.com/rainppy/crypto/blob/7234d8779d7cd55db915cb6bfe8979d2fcb7c577/project6/pic/shoot.png)
 
+输出由签名推出的公钥和真实的公钥。经比对相同。
 ## 贡献说明
 
 本项目为张雨欣独立完成
