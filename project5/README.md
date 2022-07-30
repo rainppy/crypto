@@ -122,6 +122,7 @@ main函数部分则是对攻击进行测试。
 
 ![Image text](https://github.com/rainppy/crypto/blob/6e1c8330ae9b3e80dbcaf7de23b59322549ccbc6/project5/picture/shoot.png)
 
+验证7种攻击均成功！（伪造签名或者恢复私钥）其中问题5实现了DER编码方案。
 ## 贡献说明
 
 项目由张雨欣同学个人独立完成。
