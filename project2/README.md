@@ -1,18 +1,19 @@
 # Project2: implement length extension attack for SM3
 
-`实验报告  `
+## 项目简介
 
-## sm3.py
-
-基于《SM3密码杂凑算法》官方文档自主实现了sm3算法
-
-## attack.py
+本项目实现了长度扩展攻击
 
 ### 问题场景
 
 早期人们利用哈希函数构造消息验证码的方法是，将密钥$k$和消息直接并联后计算哈希值，即$\text{Mac}_k(m)=H(k||m)$。但是这一签名方案并不是安全的，我们可以利用哈希长度扩展攻击，在未知签名密钥$k$的情况下，构造合法的签名伪造。
 
 在本项目我将上述攻击实例化到MD结构的哈希函数`sm3`上，完成上述的攻击。
+
+## 项目代码说明
+
+- sm3_2.py 依照官方文档实现了sm3算法
+- attack.py 实现了长度扩展攻击
 
 ### 代码思想
 
@@ -29,3 +30,13 @@
 check_res(extend_msg,hash_res)函数
 
 该函数模仿了拥有私钥的一方，验证签名的过程。作为本实验正确性的检验。
+
+## 项目运行截图
+
+![Image text](https://github.com/rainppy/crypto/blob/8c2a1a6893dfffda527a4bc1a4ff0248e91b9e59/project2/pic/shoot.png)
+
+长度扩展攻击，得到的消息及其哈希值。那么就实现了在未知secretkey的情况下，伪造了签名。
+
+## 贡献说明
+
+本项目由张雨欣独立完成。
