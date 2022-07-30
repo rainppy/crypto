@@ -65,8 +65,10 @@ C版：
 
 C版：
 
-- 运行make
-- 代码第6行SIZE 代表截断前SIZE字节
+- 需要老师在linux下安装新版openssl
+- linux下命令行执行make
+- 执行./rho
+- 代码第6行SIZE 代表截断前SIZE字节，老师可以调整该数值。
 
 python版：
 
