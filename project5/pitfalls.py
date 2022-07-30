@@ -1,9 +1,9 @@
 import ecdsa
 import random
 from hashlib import sha256
-from func import invmod
+from func_1 import invmod
 import myecdsa
-import sm2
+import sm2_2
 
 #问题1攻击函数
 def leak_k(e, k, sig, n):    
@@ -164,7 +164,7 @@ if __name__=="__main__":
     private_key = '00B9AB0B828FF68872F21A837FC303668428DEA11DCD1B24429D0C99E24EED83D5'
     public_key = 'B9C9A6E04E9C91F7BA880429273747D7EF5DDEB0BB2FF6317EB00BEF331A83081A6994B8993F3F5D6EADDDB81872266C87C018FB4162F5AF347B483E24620207'
     ecdsa_crypt = myecdsa.CryptECDSA(public_key=public_key, private_key=private_key)
-    sm2_crypt = sm2.CryptSM2(public_key=public_key, private_key=private_key)
+    sm2_crypt = sm2_2.CryptSM2(public_key=public_key, private_key=private_key)
     k = random.randint(1,int(ecdsa_crypt.n,16))
     data = b"111"
     r,s = ecdsa_crypt.sign(data, k)
