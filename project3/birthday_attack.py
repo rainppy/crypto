@@ -1,4 +1,4 @@
-from sm3 import sm3_hash
+from sm3_3 import sm3_hash
 import random
 import string
 
