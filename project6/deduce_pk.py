@@ -1,6 +1,6 @@
 import ecdsa
 import random
-from func import invmod,sqrtmod
+from func_3 import invmod,sqrtmod
 from hashlib import sha256
 
 #NIST384p parameters
