@@ -15,7 +15,7 @@
 
 ## 代码运行截图
 
-![Image text]((https://github.com/rainppy/crypto/blob/cc9025c03669ddc739757e1f4109a9cc4b9db9ba/project4/shoot.png))
+![Image text](https://github.com/rainppy/crypto/blob/cc9025c03669ddc739757e1f4109a9cc4b9db9ba/project4/shoot.png)
 
 测试对消息“111”签名并验签通过，算法为确定性算法，两次运行结果相同。
 
