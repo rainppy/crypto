@@ -1,6 +1,6 @@
 import binascii
 from random import choice
-import sm3, func
+import sm3_4, func_2
 from binascii import unhexlify
 # 选择素域，设置椭圆曲线参数
 
@@ -155,19 +155,19 @@ class CryptSM2(object):
     def encrypt(self, data):
         # 加密函数，data消息(bytes)
         msg = data.hex()  # 消息转化为16进制字符串
-        k = func.random_hex(self.para_len)
+        k = func_2.random_hex(self.para_len)
         C1 = self._kg(int(k, 16), self.ecc_table['g'])
         xy = self._kg(int(k, 16), self.public_key)
         x2 = xy[0:self.para_len]
         y2 = xy[self.para_len:2*self.para_len]
         ml = len(msg)
-        t = sm3.sm3_kdf(xy.encode('utf8'), ml/2)
+        t = sm3_4.sm3_kdf(xy.encode('utf8'), ml/2)
         if int(t, 16) == 0:
             return None
         else:
             form = '%%0%dx' % ml
             C2 = form % (int(msg, 16) ^ int(t, 16))
-            C3 = sm3.sm3_hash([
+            C3 = sm3_4.sm3_hash([
                 i for i in bytes.fromhex('%s%s%s' % (x2, msg, y2))
             ])
             if self.mode:
@@ -194,13 +194,13 @@ class CryptSM2(object):
         x2 = xy[0:self.para_len]
         y2 = xy[self.para_len:len_2]
         cl = len(C2)
-        t = sm3.sm3_kdf(xy.encode('utf8'), cl/2)
+        t = sm3_4.sm3_kdf(xy.encode('utf8'), cl/2)
         if int(t, 16) == 0:
             return None
         else:
             form = '%%0%dx' % cl
             M = form % (int(C2, 16) ^ int(t, 16))
-            u = sm3.sm3_hash([
+            u = sm3_4.sm3_hash([
                 i for i in bytes.fromhex('%s%s%s' % (x2, M, y2))
             ])
             return bytes.fromhex(M)
