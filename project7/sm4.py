@@ -1,6 +1,6 @@
 #-*-coding:utf-8-*-
 import copy
-from func import xor, rotl, get_uint32_be, put_uint32_be, \
+from func_2 import xor, rotl, get_uint32_be, put_uint32_be, \
         bytes_to_list, list_to_bytes, padding, unpadding
 
 #Expanded SM4 box table
