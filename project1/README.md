@@ -52,14 +52,14 @@ $x=x_i=H^{(i)}(x_0)$     $x'=x_{2i}=H^{(2i)}(x_0)$
 python版：
 
 - sm3_1.py 自主实现了sm3算法
-- rho.py实现了
+- rho.py 实现了rho算法
 
 C版：
 
 调用了openssl库
 
 - makefile
-- project1.c
+- project1.c 实现了rho算法
 
 ## 运行指导
 
