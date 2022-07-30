@@ -1,9 +1,9 @@
-from sm3 import sm3_hash
+import sm3_1 
 import random
 import string
 
 
-front = 32
+front = 24
 str_to_list = lambda data: [i for i in bytes(data,encoding="ascii")]
 
 def print_bytes(x,y):
@@ -22,26 +22,25 @@ def rho(front):
     x = x0[:]
     i = 1 
     while 1:
-        x = sm3_hash(x)
-        x1 = sm3_hash(sm3_hash(x1))
+        x = sm3_1.sm3_hash(x)
+        x1 = sm3_1.sm3_hash(sm3_1.sm3_hash(x1))
         if x[:int(front/8)]==x1[:int(front/8)]:
             break
         i+=1    
     x1 = x[:]
     x = x0[:]
     for j in range(i-1):
-        x = sm3_hash(x)
-        x1 = sm3_hash(x1)
+        x = sm3_1.sm3_hash(x)
+        x1 = sm3_1.sm3_hash(x1)
     return x,x1
         
 if __name__=="__main__":
     a,b = rho(front)
-    c = sm3_hash(a[:])
-    d = sm3_hash(b[:])
+    c = sm3_1.sm3_hash(a[:])
+    d = sm3_1.sm3_hash(b[:])
     print_bytes(a,b)
     print_bytes(c,d)
 
             
         
-    
-    
+   
