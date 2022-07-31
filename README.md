@@ -30,6 +30,7 @@ MD结构的哈希函数存在长度扩展攻击漏洞。本项目借以此攻击
 |      | 名称                                                         | 文件夹   |
 | ---- | ------------------------------------------------------------ | -------- |
 | 1    | Implement the naïve birthday attack of reduced SM3           | project3 |
+| 2    | Implemen rho method of reduced SM3                           | project1 |
 | 3    | Implement length extension attack for SM3, SHA256, etc       | project2 |
 | 4    | Report on the application of this deduce technique in Ethereum with ECDSA | project6 |
 | 5    | Impl sm2 with RFC6979                                        | project4 |
@@ -54,3 +55,9 @@ MD结构的哈希函数存在长度扩展攻击漏洞。本项目借以此攻击
 | 10   | Find a 64-byte message under some k fulfilling that their hash value is symmetrical |
 | 11   | Write a circuit to prove that your CET6 grade is larger than 425.（a. Your grade info is like `(cn_id, grade, year, sig_by_moe)`. These grades are published as commitments onchain by MoE. b. When you got an interview from an employer, you can prove to them that you have passed the exam without letting them know the exact grade.） |
 
+## 有问题的项目：Implemen rho method of reduced SM3 
+问题：rho算法似乎不适用于截断的生日攻击
+
+做完本项目（implemen rho method of reduced SM3 ）后，我完成implement the naïve birthday attack of reduced SM3时惊奇地发现，naive的方法竟然比rho算法效率还高很多。经过多日的思考，我得到的原因是Pollard Rho算法并不适用于截断前n bit找碰撞的问题，它只适用于整个哈希值找碰撞的问题。
+
+我认为rho算法之所以奏效，是因为存在循环。对整个哈希寻找碰撞的情形，若出现一次碰撞，假设它们哈希次数相差i，那么此后所有哈希次数相差i的都会发生碰撞，进入周期为i的循环。但是问题迁移到前截断前nbit，却不能再成立，就不会存在循环了，此时采用rho算法虽然可以得到解，但是却没有计算复杂度的优势了。
