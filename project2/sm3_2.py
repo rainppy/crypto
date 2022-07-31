@@ -100,7 +100,7 @@ def sm3_hash(msg):
     result = ""
     for i in y:
         result = '%s%08x' % (result, i)
-    return result
+    return y
 bytes_to_list = lambda data: [i for i in data]
 if __name__ == '__main__':
     y = sm3_hash(bytes_to_list(b"abcd"*16))
