@@ -1,13 +1,15 @@
 小组成员：张雨欣 （未组队）
+
 账户名称：rainppy
-个人共享：全部独立完成
+
+个人贡献：全部独立完成
 # 完成项目及简介
 ## Project1: implemen rho method of reduced SM3
 Pollard's rho算法是一种寻找生日攻击的算法。该算法的优势是将空间复杂度降低到$O(1)$。本项目中，我用C、python实现了两个版本，进行测试，找到了32bit的碰撞。
 ## Project2: implement length extension attack for SM3
 MD结构的哈希函数存在长度扩展攻击漏洞。本项目借以此攻击，以攻击利用哈希函数构造消息验证码的方案，获得合法伪造。在项目中，我查阅sm3官方文档，对sm3进行实现，而后实现长度扩展攻击。
 ## Project3: implement the naïve birthday attack of reduced SM3
-该方法利用以空间换时间的策略，实现生日攻击。我实现了python和c版本。python版利用其内置的字典数据结构加快查找速度，C版则用C++11标准中的unordered_map。由于unordered_map重载实现起来略显复杂，在项目截止时仍未调试成功。
+该方法利用以空间换时间的策略，实现生日攻击。我实现了python和c版本。python版利用其内置的字典数据结构加快查找速度，C版则用C++11标准中的unordered_map。由于unordered_map重载实现起来略显复杂，在项目截止时仍未调试成功。最多找到了40bit碰撞，大约耗时20分钟。
 ## Project4: implement sm2 with RFC6979
 由于ECDSA方案因代码实现时随机源质量不高屡次出现问题(如项目5中的攻击)，RFC6979文档定义了确定性数字签名生成过程。本实验我依据该文档，实现了sm2中的随机数k生成算法。
 ## Project5: verify the above pitfalls with proof-of-concept code
