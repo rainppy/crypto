@@ -6,6 +6,9 @@ def check_res(extend_msg,hash_res):
     sm3_2.Padding(B0)
     Bi = bytes_to_list(bytes(extend_msg,encoding="ascii"))
     B0.extend(Bi)
+    Message = [chr(i) for i in B0]
+    Message = Message[9:]
+    print("Message is {}".format(Message))
     if(sm3_2.sm3_hash(B0)==hash_res):
         print("success!")
     else:
