@@ -74,7 +74,7 @@ def pack_nibbles(nibbles):
 
 当产生新节点时，节点哈希和其数据会以键值对的形式存在leveldb数据库中。
 
-![Image text](E:\实验报告\创新课\project10\hash_node.png)
+![Image text](https://github.com/rainppy/crypto/blob/57c01e2b7c791a206c08fdae08f178359aa86fa9/project9/hash_node.png)
 
 当获取节点时，通过在用哈希值查找数据库获得。如上图，先获得根哈希，然后查找数据库，获得该节点。若查找中间节点，要转跳下一个节点时，value存储的即为下一个节点的哈希值，便可以查找数据库，进行获取。
 
