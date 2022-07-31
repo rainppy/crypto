@@ -25,7 +25,7 @@ MD结构的哈希函数存在长度扩展攻击漏洞。本项目借以此攻击
 ## Project9: research report on MPT
 阅读ethereum的Merkle-patricia-tree (trie) 代码实现并撰写代码解析。
 # 清单
-已完成项目：
+## 已完成项目：
 
 |      | 名称                                                         | 文件夹   |
 | ---- | ------------------------------------------------------------ | -------- |
@@ -38,7 +38,7 @@ MD结构的哈希函数存在长度扩展攻击漏洞。本项目借以此攻击
 | 8    | Forge a signature to pretend that you are Satoshi            | project8 |
 | 9    | Research report on MPT                                       | project9 |
 
-未完成项目：
+## 未完成项目：
 
 |      | 名称                                                         |
 | ---- | ------------------------------------------------------------ |
