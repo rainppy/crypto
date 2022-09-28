@@ -1,8 +1,7 @@
-小组成员：张雨欣 （未组队）
 
 账户名称：rainppy
 
-个人贡献：全部独立完成
+个人完成
 # 完成项目及简介
 ## Project1: implemen rho method of reduced SM3
 Pollard's rho算法是一种寻找生日攻击的算法。该算法的优势是将空间复杂度降低到$O(1)$。本项目中，我用C、python实现了两个版本，进行测试，找到了32bit的碰撞。
